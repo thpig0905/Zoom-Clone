@@ -8,13 +8,22 @@ html(lang="en")
         link(rel="stylesheet", href="https://unpkg.com/mvp.css")
     body  
         header 
-            h1 Noom
+            h1 Zoom
         main 
-            form#nick
-                input(type="text", placeholder="Choose a nickname", required)
-                button Save
-            ul
-            form#message
-                input(type="text", placeholder="Write a message", required)
-                button Send 
+            div#welcome
+                form
+                    input(type="text", placeholder="Room name", required)
+                    button Enter Room 
+                h4 Rooms
+                ul
+            div#room
+                h3 Room Name
+                form#name
+                    input(type="text", placeholder="Nickname", required)
+                    button Save 
+                ul 
+                form#msg
+                    input(type="text", placeholder="Message", required)
+                    button Send
+        script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js")
