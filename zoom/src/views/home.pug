@@ -9,21 +9,10 @@ html(lang="en")
     body  
         header 
             h1 Zoom
-        main 
-            div#welcome
-                form
-                    input(type="text", placeholder="Room name", required)
-                    button Enter Room 
-                h4 Rooms
-                ul
-            div#room
-                h3 Room Name
-                form#name
-                    input(type="text", placeholder="Nickname", required)
-                    button Save 
-                ul 
-                form#msg
-                    input(type="text", placeholder="Message", required)
-                    button Send
+        main    
+            div#myStream
+                video#myFace(autoPlay, playsinline, width="400", height="400") 
+                button#mute Mute
+                button#camera Camera
         script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js")
